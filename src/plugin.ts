@@ -9,7 +9,7 @@ const defaults: PluginOptions = {
   copy: false,
 };
 
-export default {
+export const plugin = {
   initArguments: {},
   configFunction: async (eleventyConfig: any, options?: PluginOptions) => {
     const _options = { ...defaults, ...options };

@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.plugin = void 0;
 const fs_1 = require("fs");
 const path_1 = require("path");
 const debug_1 = __importDefault(require("debug"));
@@ -10,7 +11,7 @@ const debug = debug_1.default('dyve:11typlugin:quicklink');
 const defaults = {
     copy: false,
 };
-exports.default = {
+exports.plugin = {
     initArguments: {},
     configFunction: async (eleventyConfig, options) => {
         const _options = { ...defaults, ...options };
