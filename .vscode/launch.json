@@ -23,5 +23,39 @@
             "port": 9229,
             "console": "integratedTerminal",
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha",
+            "cwd": "${workspaceFolder}/__test__",
+            "program": "${workspaceFolder}/node_modules/.bin/mocha",
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
+            },
+            "sourceMaps": true,
+            "smartStep": true,
+            "outFiles": [
+                "${workspaceFolder}/plugin/**"
+            ],
+            "args": [
+                "--recursive",
+                "./**/*spec.js",
+                "--no-timeouts",
+                "--bail",   // bail after first test failure
+                "--exit",
+            ],
+            "env": {
+                "NODE_ENV": "test",
+            },
+            "runtimeArgs": [
+                "--inspect",
+            ],
+            "skipFiles": [
+                "<node_internals>/**/*.js",
+                "node_modules/mocha/**/*.js"
+            ],
+            "console": "integratedTerminal",
+        },
+
     ]
 }
