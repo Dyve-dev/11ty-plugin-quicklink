@@ -1,6 +1,6 @@
 {
   "name": "@dyve/11ty-plugin-quicklink",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "@11ty plugin for including https://getquick.link in your pages",
   "main": "plugin/index.js",
   "scripts": {
