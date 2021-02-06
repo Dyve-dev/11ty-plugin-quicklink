@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/%40dyve%2F11ty-plugin-quicklink.svg)](https://badge.fury.io/js/%40dyve%2F11ty-plugin-quicklink)
+
 # 11ty-plugin-quicklink
 
 @11ty plugin for including https://getquick.link in your pages
