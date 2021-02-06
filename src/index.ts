@@ -1,2 +1,2 @@
-import { default as plugin } from './plugin';
+import { plugin } from './plugin'
 module.exports = plugin;

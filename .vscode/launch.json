@@ -1,0 +1,61 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "@11ty",
+            "cwd": "${workspaceFolder}/__test__",
+            "program": "../node_modules/@11ty/eleventy/cmd.js",
+            "runtimeArgs": [
+                "--inspect",
+            ],
+            "skipFiles": [
+                "<node_internals>/**/*.js"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+                "DEBUG": "Eleventy*"
+            },
+            "port": 9229,
+            "console": "integratedTerminal",
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Mocha",
+            "cwd": "${workspaceFolder}/__test__",
+            "program": "${workspaceFolder}/node_modules/.bin/mocha",
+            "windows": {
+                "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
+            },
+            "sourceMaps": true,
+            "smartStep": true,
+            "outFiles": [
+                "${workspaceFolder}/plugin/**"
+            ],
+            "args": [
+                "--recursive",
+                "./**/*spec.js",
+                "--no-timeouts",
+                "--bail",   // bail after first test failure
+                "--exit",
+            ],
+            "env": {
+                "NODE_ENV": "test",
+            },
+            "runtimeArgs": [
+                "--inspect",
+            ],
+            "skipFiles": [
+                "<node_internals>/**/*.js",
+                "node_modules/mocha/**/*.js"
+            ],
+            "console": "integratedTerminal",
+        },
+
+    ]
+}

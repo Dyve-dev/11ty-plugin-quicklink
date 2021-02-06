@@ -1,0 +1,13 @@
+# - because ./dist is ignored in  .gitignore .npmignore overrides .gitignore and will publish ./dist
+# - an empty .npmignore file means we will publish everyting
+__test__
+.mocharc.js
+*.map
+
+nycrc.json
+.nyc_output
+*.tsbuildinfo
+
+.vscode
+.github
+.*

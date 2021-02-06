@@ -1,7 +1,4 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const plugin_1 = __importDefault(require("./plugin"));
-module.exports = plugin_1.default;
+const plugin_1 = require("./plugin");
+module.exports = plugin_1.plugin;
