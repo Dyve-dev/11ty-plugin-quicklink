@@ -7,7 +7,7 @@ updates:
     open-pull-requests-limit: 10
     versioning-strategy: increase
     target-branch: 'dev'
-    default_labels:
+    labels:
       - "automerge"
   - package-ecosystem: 'npm'
     directory: '/'
