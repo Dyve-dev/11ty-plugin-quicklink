@@ -40,7 +40,11 @@ class Plugin {
         }
     }
     quickLinkInit(options) {
-        const { el, ...rest } = options;
+        let _options = options;
+        if (typeof options === 'string') {
+            _options = JSON.parse(options);
+        }
+        const { el, ...rest } = _options;
         const others = Object.keys(rest).map((k) => `${k}:${rest[k]}`);
         return `<script>
       window.addEventListener('load', () =>{
