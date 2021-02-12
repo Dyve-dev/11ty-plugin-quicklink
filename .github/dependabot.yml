@@ -1,8 +1,21 @@
 version: 2
 updates:
-  # Maintain dependencies for npm
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-    target-branch: "main"
+      interval: 'daily'
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    target-branch: 'dev'
+    default_labels:
+      - "automerge"
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
