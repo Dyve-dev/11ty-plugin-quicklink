@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: sudo-bot/action-pull-request-merge@v1.1.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}  
+          github-token: ${{ secrets.GITHUBTOKEN }}  
           merge-method: rebase
           filter-label: automerge
       
