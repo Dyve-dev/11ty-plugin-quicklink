@@ -17,7 +17,7 @@ jobs:
       - uses: sudo-bot/action-pull-request-merge@v1.1.1
         with:
           number: ${{ github.event.pull_request.number }}
-          github-token: ${{ secrets.GITHUBTOKEN }}  
+          github-token: ${{ secrets.AUTOMERGE_TOKEN }}  
           merge-method: rebase
           filter-label: automerge
       
